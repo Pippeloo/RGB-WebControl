@@ -1,5 +1,5 @@
 # install the following libraries with pip
-# sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
+# sudo pip install rpi_ws281x adafruit-circuitpython-neopixel
 # sudo python3 -m pip install --force-reinstall adafruit-blinka
 
 import board
@@ -7,7 +7,11 @@ import neopixel
 import socket
 import json
 
-UDP_IP = "127.0.0.1"
+
+host_name = socket.gethostname()
+host_addr = socket.gethostbyname(host_name + ".local")
+
+UDP_IP = host_addr
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -41,10 +45,10 @@ while True:
         elif msg['ch'] == 2:
             if ("r" in msg) and ("g" in msg) and ("b" in msg):
                 pixels_2.fill((msg['r'], msg['g'], msg['b']))
+                print(msg)
         elif msg['ch'] == 3:
             if ("r" in msg) and ("g" in msg) and ("b" in msg):
                 pixels_3.fill((msg['r'], msg['g'], msg['b']))
         elif msg['ch'] == 4:
             if ("r" in msg) and ("g" in msg) and ("b" in msg):
                 pixels_4.fill((msg['r'], msg['g'], msg['b']))
-

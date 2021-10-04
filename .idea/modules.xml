@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/DockerTest/.idea/DockerTest.iml" filepath="$USER_HOME$/Desktop/DockerTest/.idea/DockerTest.iml" />
       <module fileurl="file://$USER_HOME$/OneDrive - Thomas More/ThomasMore/1ITF/Python/.idea/Python.iml" filepath="$USER_HOME$/OneDrive - Thomas More/ThomasMore/1ITF/Python/.idea/Python.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RGB-WebControl.iml" filepath="$PROJECT_DIR$/.idea/RGB-WebControl.iml" />
     </modules>

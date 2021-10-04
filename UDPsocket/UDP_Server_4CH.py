@@ -29,13 +29,13 @@ while True:
             pixels_1 = neopixel.NeoPixel(board.D18, msg['p'])
             print("Configurated Channel 1!")
         elif msg['ch'] == 2:
-            pixels_2 = neopixel.NeoPixel(board.D10, msg['p'])
+            pixels_2 = neopixel.NeoPixel(board.D21, msg['p'])
             print("Configurated Channel 2!")
         elif msg['ch'] == 3:
             pixels_3 = neopixel.NeoPixel(board.D12, msg['p'])
             print("Configurated Channel 3!")
         elif msg['ch'] == 4:
-            pixels_4 = neopixel.NeoPixel(board.D21, msg['p'])
+            pixels_4 = neopixel.NeoPixel(board.D10, msg['p'])
             print("Configurated Channel 4!")
 
     if "ch" in msg:
